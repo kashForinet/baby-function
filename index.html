@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Celebration Invitation</title>
+    <style>
+        :root { --sage: #6b705c; --cream: #fdfaf5; --gold: #b7b7a4; }
+        body { font-family: 'Georgia', serif; background-color: #f1f1f1; margin: 0; padding: 15px; color: #333; }
+        .card { max-width: 550px; background: var(--cream); margin: 20px auto; padding: 40px 25px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; }
+        h1 { color: var(--sage); font-size: 2.2rem; margin-bottom: 10px; }
+        .event-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin: 25px 0; }
+        .event-box { background: #fff; padding: 15px; border-radius: 12px; border: 1px solid #e0e0e0; }
+        .time { font-weight: bold; color: var(--sage); display: block; font-size: 1.1rem; }
+        .registry-btn { display: inline-block; padding: 10px 20px; background: var(--gold); color: white; text-decoration: none; border-radius: 5px; margin: 5px; font-size: 0.9rem; }
+        form { text-align: left; margin-top: 30px; border-top: 2px solid #eee; padding-top: 25px; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        input, select, textarea { width: 100%; padding: 12px; margin-top: 5px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; }
+        .checkbox-section { background: #f9f9f9; padding: 15px; border-radius: 10px; margin-top: 15px; border: 1px dashed #ccc; }
+        .check-item { margin-bottom: 10px; display: flex; align-items: center; }
+        .check-item input { width: auto; margin-right: 10px; margin-top: 0; }
+        .submit-btn { width: 100%; padding: 15px; background: var(--sage); color: white; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <p style="letter-spacing: 2px; color: #888;">WE ARE CELEBRATING</p>
+    <h1>A New Little Life</h1>
+    <p>Please join us for a day of joy and blessings!</p>
+
+    <div class="event-grid">
+        <div class="event-box">
+            <span class="time">☀️ 11:00 AM</span>
+            <strong>Morning Function</strong>
+            <p style="font-size: 0.8rem;">Ceremony & Lunch</p>
+        </div>
+        <div class="event-box">
+            <span class="time">🥂 05:00 PM</span>
+            <strong>Evening Soirée</strong>
+            <p style="font-size: 0.8rem;">Drinks & Dinner</p>
+        </div>
+    </div>
+
+    <p>📍 <strong>Location:</strong> 123 Celebration Ave, Your City</p>
+
+    <h3>Baby Registry</h3>
+    <a href="YOUR_AMAZON_LINK" class="registry-btn" target="_blank">Amazon Registry</a>
+    <a href="YOUR_TARGET_LINK" class="registry-btn" target="_blank">Target Registry</a>
+
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <h3>RSVP</h3>
+        <label>Guest / Family Name</label>
+        <input type="text" name="name" placeholder="The Smith Family" required>
+
+        <label>Total Number of Guests</label>
+        <input type="number" name="count" min="1" required>
+
+        <div class="checkbox-section">
+            <p style="margin: 0 0 10px 0; font-weight: bold;">Which events will you attend?</p>
+            <div class="check-item">
+                <input type="checkbox" name="attending_morning" value="Yes" id="morn">
+                <label for="morn" style="margin:0; font-weight:normal;">11:00 AM Function (Lunch)</label>
+            </div>
+            <div class="check-item">
+                <input type="checkbox" name="attending_evening" value="Yes" id="even">
+                <label for="even" style="margin:0; font-weight:normal;">05:00 PM Celebration (Dinner)</label>
+            </div>
+        </div>
+
+        <label>Food Preference / Allergies</label>
+        <textarea name="food_notes" rows="2" placeholder="Vegetarian, Nut Allergy, etc."></textarea>
+
+        <button type="submit" class="submit-btn">Send My RSVP</button>
+    </form>
+</div>
+
+</body>
+</html>
